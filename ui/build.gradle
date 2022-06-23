@@ -1,0 +1,11 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+apply from:"$rootProject.projectDir/module.gradle"
+apply from:"$rootProject.projectDir/ui.gradle"
+
+dependencies {
+    implementation(project(":core"))
+}

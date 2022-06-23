@@ -1,0 +1,20 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+apply from:"$rootProject.projectDir/module.gradle"
+apply from:"$rootProject.projectDir/ui.gradle"
+
+android {
+    defaultConfig {
+        applicationId app_id
+        versionCode version_code as int
+        versionName version_name
+    }
+}
+
+dependencies {
+    implementation(project(":core"))
+    implementation(project(":ui"))
+}
